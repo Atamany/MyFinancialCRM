@@ -74,6 +74,7 @@
             this.btnQuit.TabIndex = 7;
             this.btnQuit.Text = "Çıkış Yap!";
             this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnKategoriler
             // 
@@ -191,6 +192,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Paneli";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

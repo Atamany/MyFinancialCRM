@@ -92,6 +92,7 @@
             this.btnQuit.TabIndex = 7;
             this.btnQuit.Text = "Çıkış Yap!";
             this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnKategoriler
             // 
@@ -377,6 +378,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmBillings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faturalar";
             this.Load += new System.EventHandler(this.FrmBillings_Load);
             this.panel2.ResumeLayout(false);

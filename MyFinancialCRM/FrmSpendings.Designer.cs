@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnQuit = new System.Windows.Forms.Button();
@@ -39,8 +40,33 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnBanks = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBFinancialCRMDataSet = new MyFinancialCRM.DBFinancialCRMDataSet();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnListSpending = new System.Windows.Forms.Button();
+            this.btnAddSpending = new System.Windows.Forms.Button();
+            this.btnUpdateSpending = new System.Windows.Forms.Button();
+            this.btnDeleteSpending = new System.Windows.Forms.Button();
+            this.txtSpendingDate = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSpendingAmount = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSpendingTitle = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSpendingId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.categoriesTableAdapter = new MyFinancialCRM.DBFinancialCRMDataSetTableAdapters.CategoriesTableAdapter();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBFinancialCRMDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -74,6 +100,7 @@
             this.btnQuit.TabIndex = 7;
             this.btnQuit.Text = "Çıkış Yap!";
             this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnKategoriler
             // 
@@ -183,18 +210,231 @@
             this.panel1.Size = new System.Drawing.Size(285, 631);
             this.panel1.TabIndex = 11;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Location = new System.Drawing.Point(305, 387);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1057, 339);
+            this.panel4.TabIndex = 16;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1056, 339);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cmbCategory);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.btnListSpending);
+            this.panel3.Controls.Add(this.btnAddSpending);
+            this.panel3.Controls.Add(this.btnUpdateSpending);
+            this.panel3.Controls.Add(this.btnDeleteSpending);
+            this.panel3.Controls.Add(this.txtSpendingDate);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txtSpendingAmount);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtSpendingTitle);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.txtSpendingId);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(306, 115);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1056, 266);
+            this.panel3.TabIndex = 15;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.DataSource = this.categoriesBindingSource;
+            this.cmbCategory.DisplayMember = "CategoryName";
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(106, 171);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(940, 24);
+            this.cmbCategory.TabIndex = 15;
+            this.cmbCategory.ValueMember = "CategoryId";
+            // 
+            // categoriesBindingSource
+            // 
+            this.categoriesBindingSource.DataMember = "Categories";
+            this.categoriesBindingSource.DataSource = this.dBFinancialCRMDataSet;
+            // 
+            // dBFinancialCRMDataSet
+            // 
+            this.dBFinancialCRMDataSet.DataSetName = "DBFinancialCRMDataSet";
+            this.dBFinancialCRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(19, 171);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 24);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Kategori:";
+            // 
+            // btnListSpending
+            // 
+            this.btnListSpending.BackColor = System.Drawing.SystemColors.Control;
+            this.btnListSpending.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnListSpending.ForeColor = System.Drawing.Color.Black;
+            this.btnListSpending.Location = new System.Drawing.Point(106, 210);
+            this.btnListSpending.Name = "btnListSpending";
+            this.btnListSpending.Size = new System.Drawing.Size(213, 43);
+            this.btnListSpending.TabIndex = 13;
+            this.btnListSpending.Text = "Harcama Listesi";
+            this.btnListSpending.UseVisualStyleBackColor = false;
+            this.btnListSpending.Click += new System.EventHandler(this.btnListSpending_Click);
+            // 
+            // btnAddSpending
+            // 
+            this.btnAddSpending.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddSpending.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddSpending.ForeColor = System.Drawing.Color.Black;
+            this.btnAddSpending.Location = new System.Drawing.Point(348, 210);
+            this.btnAddSpending.Name = "btnAddSpending";
+            this.btnAddSpending.Size = new System.Drawing.Size(213, 43);
+            this.btnAddSpending.TabIndex = 12;
+            this.btnAddSpending.Text = "Yeni Harcama";
+            this.btnAddSpending.UseVisualStyleBackColor = false;
+            this.btnAddSpending.Click += new System.EventHandler(this.btnAddSpending_Click);
+            // 
+            // btnUpdateSpending
+            // 
+            this.btnUpdateSpending.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdateSpending.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUpdateSpending.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateSpending.Location = new System.Drawing.Point(833, 210);
+            this.btnUpdateSpending.Name = "btnUpdateSpending";
+            this.btnUpdateSpending.Size = new System.Drawing.Size(213, 43);
+            this.btnUpdateSpending.TabIndex = 11;
+            this.btnUpdateSpending.Text = "Harcama Güncelle";
+            this.btnUpdateSpending.UseVisualStyleBackColor = false;
+            this.btnUpdateSpending.Click += new System.EventHandler(this.btnUpdateSpending_Click);
+            // 
+            // btnDeleteSpending
+            // 
+            this.btnDeleteSpending.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteSpending.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDeleteSpending.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteSpending.Location = new System.Drawing.Point(590, 211);
+            this.btnDeleteSpending.Name = "btnDeleteSpending";
+            this.btnDeleteSpending.Size = new System.Drawing.Size(213, 43);
+            this.btnDeleteSpending.TabIndex = 10;
+            this.btnDeleteSpending.Text = "Harcama Sil";
+            this.btnDeleteSpending.UseVisualStyleBackColor = false;
+            this.btnDeleteSpending.Click += new System.EventHandler(this.btnDeleteSpending_Click);
+            // 
+            // txtSpendingDate
+            // 
+            this.txtSpendingDate.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtSpendingDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSpendingDate.Location = new System.Drawing.Point(106, 130);
+            this.txtSpendingDate.Name = "txtSpendingDate";
+            this.txtSpendingDate.Size = new System.Drawing.Size(940, 32);
+            this.txtSpendingDate.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(47, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 24);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Tarih:";
+            // 
+            // txtSpendingAmount
+            // 
+            this.txtSpendingAmount.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtSpendingAmount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSpendingAmount.Location = new System.Drawing.Point(106, 92);
+            this.txtSpendingAmount.Name = "txtSpendingAmount";
+            this.txtSpendingAmount.Size = new System.Drawing.Size(940, 32);
+            this.txtSpendingAmount.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(33, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 24);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Miktar:";
+            // 
+            // txtSpendingTitle
+            // 
+            this.txtSpendingTitle.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtSpendingTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSpendingTitle.Location = new System.Drawing.Point(106, 54);
+            this.txtSpendingTitle.Name = "txtSpendingTitle";
+            this.txtSpendingTitle.Size = new System.Drawing.Size(940, 32);
+            this.txtSpendingTitle.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(40, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Başlık:";
+            // 
+            // txtSpendingId
+            // 
+            this.txtSpendingId.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtSpendingId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSpendingId.Location = new System.Drawing.Point(106, 15);
+            this.txtSpendingId.Name = "txtSpendingId";
+            this.txtSpendingId.Size = new System.Drawing.Size(940, 32);
+            this.txtSpendingId.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(71, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ID:";
+            // 
+            // categoriesTableAdapter
+            // 
+            this.categoriesTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmSpendings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1374, 727);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmSpendings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giderler";
+            this.Load += new System.EventHandler(this.FrmSpendings_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBFinancialCRMDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +452,25 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnBanks;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnListSpending;
+        private System.Windows.Forms.Button btnAddSpending;
+        private System.Windows.Forms.Button btnUpdateSpending;
+        private System.Windows.Forms.Button btnDeleteSpending;
+        private System.Windows.Forms.TextBox txtSpendingDate;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSpendingAmount;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSpendingTitle;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSpendingId;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbCategory;
+        private DBFinancialCRMDataSet dBFinancialCRMDataSet;
+        private System.Windows.Forms.BindingSource categoriesBindingSource;
+        private DBFinancialCRMDataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter;
     }
 }

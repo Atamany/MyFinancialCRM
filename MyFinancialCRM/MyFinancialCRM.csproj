@@ -55,6 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBFinancialCRMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBFinancialCRMDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FrmBankaHareketleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +174,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DBFinancialCRMDataSet.xsc">
+      <DependentUpon>DBFinancialCRMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBFinancialCRMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBFinancialCRMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBFinancialCRMDataSet.xss">
+      <DependentUpon>DBFinancialCRMDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

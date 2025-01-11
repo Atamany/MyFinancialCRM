@@ -89,5 +89,10 @@ namespace MyFinancialCRM
             frm.Show();
             this.Hide();
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

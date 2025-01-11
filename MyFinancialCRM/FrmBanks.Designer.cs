@@ -98,6 +98,7 @@
             this.btnQuit.TabIndex = 7;
             this.btnQuit.Text = "Çıkış Yap!";
             this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnKategoriler
             // 
@@ -431,6 +432,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmBanks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banka";
             this.Load += new System.EventHandler(this.FrmBanks_Load);
             this.panel2.ResumeLayout(false);
