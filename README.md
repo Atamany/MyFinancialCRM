@@ -10,9 +10,6 @@
 <li>Entity Framework</li>
 </ul>
 
-<h3>Login</h3>
-<img src="https://github.com/user-attachments/assets/ef4bb6a1-c3c7-4183-a01e-4a0a7608dce1" title="Login" alt="Login">
-
 <h3>Dashboard</h3>
 <img src= "https://github.com/user-attachments/assets/f299a976-46f7-4387-914b-4ad5de14fdac" title="Dashboard" alt="Dashboard">
 
@@ -33,3 +30,6 @@
 
 <h3>Ayarlar</h3>
 <img src="https://github.com/user-attachments/assets/840b2dd9-568b-46d5-8e53-f627e5491467" title="Ayarlar" alt="Ayarlar">
+
+<h3>Login</h3>
+<img src="https://github.com/user-attachments/assets/ef4bb6a1-c3c7-4183-a01e-4a0a7608dce1" title="Login" alt="Login">
